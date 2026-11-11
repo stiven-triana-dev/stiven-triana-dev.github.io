@@ -62,15 +62,18 @@ export const proyectos = [
     nombre: 'VisagShop',
     tipo: 'Tienda virtual de moda urbana',
     problema:
-      'Proyecto de práctica de arquitectura web: una tienda de ropa urbana necesita un catálogo en línea donde el cliente vea tallas y arme su pedido.',
+      'Proyecto integrador para una tienda de ropa urbana de Lebrija que vende por WhatsApp: el cliente necesitaba ver precios y tallas y armar su pedido, y la tienda necesitaba registrar y seguir esos pedidos.',
     solucion:
-      'Una tienda en línea con catálogo, búsqueda, filtros por talla y carrito, que envía el pedido listo por WhatsApp. Incluye cuentas de cliente y un panel para administrar productos.',
+      'Una tienda en línea con 108 productos, buscador, carrito y cuentas de cliente. Cada pedido se guarda con un número (VS-1001) antes de enviarse por WhatsApp, y un panel permite administrar productos, cambiar el estado de los pedidos y exportarlos a Excel.',
     decisiones: [
-      'Pedidos por WhatsApp en lugar de pasarela de pago, con el alcance real (qué hace y qué no) documentado en el README.',
-      'Funciona con archivos JSON en desarrollo y con PostgreSQL (Neon) en producción con solo configurar DATABASE_URL.',
+      'Pasé la persistencia de archivos JSON a PostgreSQL con Sequelize (12 tablas relacionadas) y migré los datos que ya estaban en producción sin perder clientes, sesiones ni fotos.',
+      'Validación con las mismas reglas en el servidor (express-validator) y en el navegador; el total del pedido se calcula siempre en el servidor con los precios de la base.',
+      '28 pruebas automatizadas, incluidas pruebas contra PostgreSQL real de la migración, los scripts SQL y el CRUD, que corren en GitHub Actions en cada cambio.',
     ],
-    stack: ['Node.js', 'Express', 'EJS', 'PostgreSQL', 'Render'],
-    imagenes: [{ src: 'img/visagshop-home.png', alt: 'Página de inicio de VisagShop con jeans y gorra destacados' }],
+    stack: ['Node.js', 'Express', 'EJS', 'PostgreSQL', 'Sequelize', 'express-validator', 'GitHub Actions', 'Render'],
+    imagenes: [
+      { src: 'img/visagshop-home.png', alt: 'Página de inicio de VisagShop con el título Viste a tu manera, un jean y una gorra' },
+    ],
     enlaces: [
       { texto: 'Abrir la tienda', url: 'https://visagshop.onrender.com', nota: 'Puede tardar unos segundos en despertar' },
       { texto: 'Ver el código en GitHub', url: 'https://github.com/stiven-triana-dev/VisagShop' },
