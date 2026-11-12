@@ -11,6 +11,8 @@ export const clasesDePrueba = [
   'CalculadoraNotasTest',
   'CalificacionServiceTest',
   'CuentaAccesoServiceTest',
+  'DemoInicializadorIntegracionTest',
+  'DemoModoTest',
   'DocenteAutorizacionTest',
   'DocenteServiceTest',
   'EstudianteAutorizacionTest',
@@ -27,8 +29,8 @@ export const clasesDePrueba = [
 ]
 
 export const cifras = [
-  { valor: '92', texto: 'pruebas automatizadas en UniGest, 0 fallos' },
-  { valor: '3', texto: 'proyectos propios, uno publicado en línea' },
+  { valor: '97', texto: 'pruebas automatizadas en UniGest, 0 fallos' },
+  { valor: '3', texto: 'proyectos propios, dos publicados en línea' },
   { valor: '+2', texto: 'años en un semillero de investigación' },
   { valor: '2', texto: 'ponencias en encuentros de semilleros' },
 ]
@@ -36,7 +38,7 @@ export const cifras = [
 export const proyectos = [
   {
     id: 'unigest',
-    estado: 'Código + CI',
+    estado: 'En línea',
     nombre: 'UniGest',
     tipo: 'Sistema de gestión académica',
     problema:
@@ -45,16 +47,20 @@ export const proyectos = [
       'Una aplicación web con tres espacios de trabajo —administración, docencia y estudiantes— donde cada rol solo accede a lo suyo.',
     decisiones: [
       'Control de acceso por roles con Spring Security, contraseñas cifradas con BCrypt y protección CSRF.',
-      '92 pruebas automatizadas con JUnit, incluidas pruebas de autorización por rol, que corren en GitHub Actions contra PostgreSQL en cada cambio.',
+      '97 pruebas automatizadas con JUnit, incluidas pruebas de autorización por rol, que corren en GitHub Actions contra PostgreSQL en cada cambio.',
+      'Demo pública en Render con Docker: datos ficticios que se reinician al arrancar y cuentas de prueba por rol protegidas contra cambios.',
       'Esquema de base de datos versionado con migraciones Flyway, para que cualquier entorno quede igual.',
     ],
-    stack: ['Java 21', 'Spring Boot', 'Spring Security', 'Spring Data JPA', 'PostgreSQL', 'Flyway', 'JUnit', 'GitHub Actions'],
+    stack: ['Java 21', 'Spring Boot', 'Spring Security', 'Spring Data JPA', 'PostgreSQL', 'Flyway', 'JUnit', 'GitHub Actions', 'Docker', 'Render'],
     imagenes: [
       { src: 'img/unigest-panel.png', alt: 'Panel de administración de UniGest con el menú de estudiantes, docentes, grupos y matrículas' },
       { src: 'img/unigest-portal-docente.png', alt: 'Portal docente de UniGest' },
       { src: 'img/unigest-boletin.png', alt: 'Boletín de calificaciones del estudiante en UniGest' },
     ],
-    enlaces: [{ texto: 'Ver el código en GitHub', url: 'https://github.com/stiven-triana-dev/UniGest' }],
+    enlaces: [
+      { texto: 'Probar la demo', url: 'https://unigest-d9zx.onrender.com', nota: 'Puede tardar cerca de un minuto en despertar' },
+      { texto: 'Ver el código en GitHub', url: 'https://github.com/stiven-triana-dev/UniGest' },
+    ],
   },
   {
     id: 'visagshop',
