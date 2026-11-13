@@ -30,7 +30,7 @@ export const clasesDePrueba = [
 
 export const cifras = [
   { valor: '97', texto: 'pruebas automatizadas en UniGest, 0 fallos' },
-  { valor: '3', texto: 'proyectos propios, dos publicados en línea' },
+  { valor: '4', texto: 'proyectos propios, tres publicados en línea' },
   { valor: '+2', texto: 'años en un semillero de investigación' },
   { valor: '2', texto: 'ponencias en encuentros de semilleros' },
 ]
@@ -86,6 +86,29 @@ export const proyectos = [
     ],
   },
   {
+    id: 'visagassist',
+    estado: 'En línea',
+    nombre: 'VisagAssist',
+    tipo: 'Asistente con IA para VisagShop',
+    problema:
+      'Los clientes de la tienda preguntan por WhatsApp cosas que ya están en la base de datos: si hay una talla, qué cuesta una gorra o cómo va su pedido.',
+    solucion:
+      'Un chat dentro de la tienda que responde en español con los datos reales: un agente en Python (FastAPI) que usa la API de Claude o Gemini y solo puede consultar mediante 7 herramientas fijas de solo lectura.',
+    decisiones: [
+      'La IA nunca escribe SQL: elige una herramienta de una lista cerrada; la base se lee con un usuario de solo lectura que no ve cuentas ni sesiones.',
+      'El servidor de la tienda firma quién pregunta (JWT), así un cliente solo ve sus pedidos aunque intente engañar al modelo; hay pruebas contra prompt injection.',
+      '380 pruebas con pytest y evaluaciones del agente real con 42 casos (100 %); publicado con Docker en Render.',
+    ],
+    stack: ['Python', 'FastAPI', 'SQLAlchemy', 'PostgreSQL', 'API de Claude / Gemini', 'pytest', 'Docker', 'Render'],
+    imagenes: [
+      { src: 'img/visagassist-chat.png', alt: 'Chat de VisagAssist abierto en VisagShop respondiendo con gorras de 45.000 pesos y sus enlaces' },
+    ],
+    enlaces: [
+      { texto: 'Probarlo en la tienda', url: 'https://visagshop.onrender.com', nota: 'Botón "Pregúntale a Visag", abajo a la derecha' },
+      { texto: 'Ver el código en GitHub', url: 'https://github.com/stiven-triana-dev/VisagAssist' },
+    ],
+  },
+  {
     id: 'muelitas',
     estado: 'Investigación',
     nombre: 'Mundo Muelitas',
@@ -128,9 +151,10 @@ export const trayectoria = [
 ]
 
 export const habilidades = [
-  { grupo: 'Lenguajes', items: ['Java', 'JavaScript', 'SQL', 'HTML', 'CSS'] },
-  { grupo: 'Backend', items: ['Spring Boot', 'Spring Security', 'Spring Data JPA', 'Node.js', 'Express', 'API REST'] },
+  { grupo: 'Lenguajes', items: ['Java', 'JavaScript', 'SQL', 'HTML', 'CSS', 'Python (básico)'] },
+  { grupo: 'Backend', items: ['Spring Boot', 'Spring Security', 'Spring Data JPA', 'Node.js', 'Express', 'FastAPI', 'API REST'] },
   { grupo: 'Datos', items: ['PostgreSQL', 'Modelado relacional', 'Flyway'] },
-  { grupo: 'Calidad', items: ['JUnit', 'Pruebas automatizadas', 'GitHub Actions'] },
+  { grupo: 'Calidad', items: ['JUnit', 'pytest', 'Pruebas automatizadas', 'GitHub Actions'] },
+  { grupo: 'IA', items: ['API de Claude y Gemini', 'Agentes con herramientas', 'Evaluaciones de agentes'] },
   { grupo: 'Herramientas', items: ['Git', 'GitHub', 'Maven', 'VS Code', 'Render', 'Unity'] },
 ]
