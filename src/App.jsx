@@ -247,7 +247,7 @@ export default function App() {
             ))}
             <div>
               <h3>Idiomas</h3>
-              <p>Español nativo, inglés A2 en formación</p>
+              <p>Español nativo, inglés B1 en formación</p>
             </div>
           </div>
         </section>
