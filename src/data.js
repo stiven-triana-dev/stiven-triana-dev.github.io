@@ -30,7 +30,7 @@ export const clasesDePrueba = [
 
 export const cifras = [
   { valor: '97', texto: 'pruebas automatizadas en UniGest, 0 fallos' },
-  { valor: '4', texto: 'proyectos propios, tres publicados en línea' },
+  { valor: '5', texto: 'proyectos propios, tres publicados en línea' },
   { valor: '+2', texto: 'años en un semillero de investigación' },
   { valor: '2', texto: 'ponencias en encuentros de semilleros' },
 ]
@@ -109,6 +109,26 @@ export const proyectos = [
     ],
   },
   {
+    id: 'visagdata',
+    estado: 'En GitHub',
+    nombre: 'VisagData',
+    tipo: 'Análisis de ventas con datos',
+    problema:
+      'Una tienda necesita entender sus ventas: qué meses venden más, qué productos y ciudades dejan más ingresos y cuántos pedidos se cancelan. Los datos reales suelen venir desordenados.',
+    solucion:
+      'Un pipeline que toma un año de ventas de ejemplo (con el catálogo real de VisagShop), las limpia y organiza con dbt en un modelo estrella, y las muestra en un tablero de Power BI con filtros.',
+    decisiones: [
+      'Limpieza con dbt: ciudades y métodos de pago escritos de muchas formas se unifican con un diccionario, y una prueba avisa si aparece una forma nueva.',
+      '40 pruebas de calidad de datos (claves, valores permitidos y cuadre de totales), 1 prueba unitaria y 9 con pytest, en GitHub Actions.',
+      'Tablero en Power BI con medidas DAX: ventas, ticket promedio, % de cancelación, ventas por mes, categoría y ciudad, y top 10 de productos.',
+    ],
+    stack: ['SQL', 'dbt', 'DuckDB', 'Power BI', 'DAX', 'Python', 'pytest', 'GitHub Actions'],
+    imagenes: [
+      { src: 'img/visagdata-tablero.png', alt: 'Tablero de Power BI con ventas totales, ventas por mes, por categoría, por ciudad y top 10 de productos' },
+    ],
+    enlaces: [{ texto: 'Ver el proyecto en GitHub', url: 'https://github.com/stiven-triana-dev/VisagData' }],
+  },
+  {
     id: 'muelitas',
     estado: 'Investigación',
     nombre: 'Mundo Muelitas',
@@ -153,7 +173,7 @@ export const trayectoria = [
 export const habilidades = [
   { grupo: 'Lenguajes', items: ['Java', 'JavaScript', 'SQL', 'HTML', 'CSS', 'Python (básico)'] },
   { grupo: 'Backend', items: ['Spring Boot', 'Spring Security', 'Spring Data JPA', 'Node.js', 'Express', 'FastAPI', 'API REST'] },
-  { grupo: 'Datos', items: ['PostgreSQL', 'Modelado relacional', 'Flyway'] },
+  { grupo: 'Datos', items: ['PostgreSQL', 'Modelado relacional', 'Flyway', 'dbt', 'DuckDB', 'Power BI (DAX)', 'Modelo estrella'] },
   { grupo: 'Calidad', items: ['JUnit', 'pytest', 'Pruebas automatizadas', 'GitHub Actions'] },
   { grupo: 'IA', items: ['API de Claude y Gemini', 'Agentes con herramientas', 'Evaluaciones de agentes'] },
   { grupo: 'Herramientas', items: ['Git', 'GitHub', 'Maven', 'VS Code', 'Render', 'Unity'] },
