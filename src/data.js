@@ -15,6 +15,7 @@ export const clasesDePrueba = [
   'DemoModoTest',
   'DocenteAutorizacionTest',
   'DocenteServiceTest',
+  'DocumentacionApiTest',
   'EstudianteAutorizacionTest',
   'EstudianteServiceTest',
   'EvaluacionServiceTest',
@@ -29,7 +30,7 @@ export const clasesDePrueba = [
 ]
 
 export const cifras = [
-  { valor: '97', texto: 'pruebas automatizadas en UniGest, 0 fallos' },
+  { valor: '100', texto: 'pruebas automatizadas en UniGest, 0 fallos' },
   { valor: '5', texto: 'proyectos propios, tres publicados en línea' },
   { valor: '+2', texto: 'años en un semillero de investigación' },
   { valor: '2', texto: 'ponencias en encuentros de semilleros' },
@@ -47,7 +48,7 @@ export const proyectos = [
       'Una aplicación web con tres espacios de trabajo —administración, docencia y estudiantes— donde cada rol solo accede a lo suyo.',
     decisiones: [
       'Control de acceso por roles con Spring Security, contraseñas cifradas con BCrypt y protección CSRF.',
-      '97 pruebas automatizadas con JUnit, incluidas pruebas de autorización por rol, que corren en GitHub Actions contra PostgreSQL en cada cambio.',
+      '100 pruebas automatizadas con JUnit, incluidas pruebas de autorización por rol, que corren en GitHub Actions contra PostgreSQL en cada cambio.',
       'Demo pública en Render con Docker: datos ficticios que se reinician al arrancar y cuentas de prueba por rol protegidas contra cambios.',
       'Esquema de base de datos versionado con migraciones Flyway, para que cualquier entorno quede igual.',
     ],

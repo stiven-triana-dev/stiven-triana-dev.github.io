@@ -21,7 +21,7 @@ function CorridaDePruebas() {
   const terminado = hechas >= total
 
   return (
-    <figure className="corrida" aria-label="Pruebas automatizadas de UniGest: 97 pruebas, 0 fallos">
+    <figure className="corrida" aria-label="Pruebas automatizadas de UniGest: 100 pruebas, 0 fallos">
       <div className="corrida__barra" aria-hidden="true">
         <span className="corrida__puntos">
           <i />
@@ -40,7 +40,7 @@ function CorridaDePruebas() {
         {terminado ? (
           <>
             {'\n'}
-            <span className="c-res">Tests run: 97, Failures: 0, Errors: 0</span>
+            <span className="c-res">Tests run: 100, Failures: 0, Errors: 0</span>
             {'\n'}
             <span className="c-build">BUILD SUCCESS</span>
           </>
@@ -167,7 +167,7 @@ export default function App() {
         <section className="publicos" aria-label="Cómo puedo ayudarte">
           <div className="tarjeta publico">
             <h2>¿Buscas un practicante o un junior?</h2>
-            <p>Estudio sexto semestre de Ingeniería de Sistemas y puedo trabajar en remoto, híbrido o presencial.</p>
+            <p>Estudio sexto semestre de Ingeniería de Sistemas y puedo trabajar en remoto o híbrido.</p>
             <a className="boton boton--acento" href={contacto.whatsapp} target="_blank" rel="noopener noreferrer">
               Escríbeme por WhatsApp
             </a>
