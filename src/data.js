@@ -6,7 +6,6 @@ export const contacto = {
   cv: 'HV_Neider_Stiven_Triana_Neira.pdf',
 }
 
-// Clases de prueba reales de UniGest (src/test)
 export const clasesDePrueba = [
   'CalculadoraNotasTest',
   'CalificacionServiceTest',
@@ -75,9 +74,10 @@ export const proyectos = [
     decisiones: [
       'Pasé la persistencia de archivos JSON a PostgreSQL con Sequelize (12 tablas relacionadas) y migré los datos que ya estaban en producción sin perder clientes, sesiones ni fotos.',
       'Validación con las mismas reglas en el servidor (express-validator) y en el navegador; el total del pedido se calcula siempre en el servidor con los precios de la base.',
-      '28 pruebas automatizadas, incluidas pruebas contra PostgreSQL real de la migración, los scripts SQL y el CRUD, que corren en GitHub Actions en cada cambio.',
+      '38 pruebas automatizadas, incluidas pruebas contra PostgreSQL real de la migración, los scripts SQL y el CRUD, más Prettier y ESLint, que corren en GitHub Actions en cada cambio.',
+      'Integré VisagAssist como chat dentro de la tienda: el servidor firma quién pregunta, así cada cliente solo puede consultar sus propios pedidos.',
     ],
-    stack: ['Node.js', 'Express', 'EJS', 'PostgreSQL', 'Sequelize', 'express-validator', 'GitHub Actions', 'Render'],
+    stack: ['Node.js', 'Express', 'EJS', 'PostgreSQL', 'Sequelize', 'express-validator', 'ESLint', 'GitHub Actions', 'Render'],
     imagenes: [
       { src: 'img/visagshop-home.png', alt: 'Página de inicio de VisagShop con el título Viste a tu manera, un jean y una gorra' },
     ],
@@ -163,7 +163,6 @@ export const principios = [
   },
 ]
 
-// Línea de tiempo: es una secuencia real, por eso va con fechas
 export const trayectoria = [
   { fecha: 'Feb. 2024 – hoy', titulo: 'Ingeniería de Sistemas · UNISANGIL', texto: 'Sexto semestre. Grado previsto: diciembre de 2027.' },
   { fecha: 'May. 2024 – hoy', titulo: 'Semillero de investigación GIBD-SI', texto: 'Grupo HYDRA. Proyecto Mundo Muelitas y 2 ponencias en encuentros de semilleros.' },
