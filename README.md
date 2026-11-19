@@ -1,6 +1,6 @@
-# Portafolio de Stiven Triana
+# Portafolio
 
-Sitio personal de **Neider Stiven Triana Neira**, desarrollador backend junior (Java · Spring Boot · PostgreSQL) en San Gil, Colombia.
+Sitio personal, desarrollador backend junior (Java · Spring Boot · PostgreSQL) en San Gil, Colombia.
 
 🌐 **En línea:** https://stiven-triana-dev.github.io
 
