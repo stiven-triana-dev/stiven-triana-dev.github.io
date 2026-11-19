@@ -7,7 +7,6 @@ function prefiereMenosMovimiento() {
   return typeof window !== 'undefined' && window.matchMedia('(prefers-reduced-motion: reduce)').matches
 }
 
-/* Reproduce la corrida real de pruebas de UniGest una sola vez al cargar */
 function CorridaDePruebas() {
   const total = clasesDePrueba.length
   const [hechas, setHechas] = useState(() => (prefiereMenosMovimiento() ? total : 0))
@@ -67,7 +66,6 @@ function Tema() {
     try {
       if (tema) localStorage.setItem('tema', tema)
     } catch {
-      /* sin almacenamiento: el tema sigue al sistema */
     }
   }, [tema])
 

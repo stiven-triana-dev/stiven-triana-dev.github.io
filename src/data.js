@@ -6,7 +6,6 @@ export const contacto = {
   cv: 'HV_Neider_Stiven_Triana_Neira.pdf',
 }
 
-// Clases de prueba reales de UniGest (src/test)
 export const clasesDePrueba = [
   'CalculadoraNotasTest',
   'CalificacionServiceTest',
@@ -163,7 +162,6 @@ export const principios = [
   },
 ]
 
-// Línea de tiempo: es una secuencia real, por eso va con fechas
 export const trayectoria = [
   { fecha: 'Feb. 2024 – hoy', titulo: 'Ingeniería de Sistemas · UNISANGIL', texto: 'Sexto semestre. Grado previsto: diciembre de 2027.' },
   { fecha: 'May. 2024 – hoy', titulo: 'Semillero de investigación GIBD-SI', texto: 'Grupo HYDRA. Proyecto Mundo Muelitas y 2 ponencias en encuentros de semilleros.' },
