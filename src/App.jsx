@@ -171,7 +171,10 @@ export default function App() {
           </div>
           <div className="tarjeta publico">
             <h2>¿Revisas candidatos?</h2>
-            <p>Backend con Java y Node.js, pruebas con JUnit, integración continua y más de dos años en investigación.</p>
+            <p>
+              Backend con Java y Node.js, interfaces con React y TypeScript, pruebas automatizadas, integración continua y
+              más de dos años en investigación.
+            </p>
             <div className="publico__acciones">
               <a className="boton" href={base + contacto.cv} download>
                 Descargar hoja de vida

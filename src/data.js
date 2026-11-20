@@ -30,7 +30,7 @@ export const clasesDePrueba = [
 
 export const cifras = [
   { valor: '100', texto: 'pruebas automatizadas en UniGest, 0 fallos' },
-  { valor: '5', texto: 'proyectos propios, tres publicados en línea' },
+  { valor: '6', texto: 'proyectos propios, cuatro publicados en línea' },
   { valor: '+2', texto: 'años en un semillero de investigación' },
   { valor: '2', texto: 'ponencias en encuentros de semilleros' },
 ]
@@ -84,6 +84,30 @@ export const proyectos = [
     enlaces: [
       { texto: 'Abrir la tienda', url: 'https://visagshop.onrender.com', nota: 'Puede tardar unos segundos en despertar' },
       { texto: 'Ver el código en GitHub', url: 'https://github.com/stiven-triana-dev/VisagShop' },
+    ],
+  },
+  {
+    id: 'visagstock',
+    estado: 'En línea',
+    nombre: 'VisagStock',
+    tipo: 'Inventario por talla para VisagShop',
+    problema:
+      'La tienda sabía qué productos y tallas vendía, pero no cuántas unidades quedaban de cada talla. Una prenda devuelta dañada podía volver a aparecer como disponible.',
+    solucion:
+      'Una aplicación en React y TypeScript con su propia API que usa la misma base de datos de la tienda. Lleva el stock de cada talla, registra ingresos, despachos, devoluciones, bajas y ajustes con su motivo, y avisa cuando algo se está agotando.',
+    decisiones: [
+      'Nunca vende de más: cada movimiento bloquea la fila en PostgreSQL (SELECT … FOR UPDATE); una prueba lanza ocho despachos a la vez con cinco unidades y solo pasan cinco.',
+      'Una devolución pide el estado de la prenda: en buen estado vuelve a la venta y dañada solo queda registrada. La base de datos también lo exige con reglas CHECK.',
+      'Cuenta de invitado para probarla sin contraseña: usa el mismo código real dentro de una transacción y al final hace ROLLBACK, así nada se guarda.',
+      '45 pruebas (33 de la API contra PostgreSQL real y 12 de pantallas con Testing Library) en GitHub Actions; en el celular las tablas se convierten en tarjetas.',
+    ],
+    stack: ['React', 'TypeScript', 'Vite', 'React Router', 'Node.js', 'Express', 'Zod', 'PostgreSQL', 'Vitest', 'GitHub Actions', 'Render'],
+    imagenes: [
+      { src: 'img/visagstock-resumen.png', alt: 'Resumen de VisagStock con productos, unidades en tienda, stock bajo, agotados y movimientos recientes' },
+    ],
+    enlaces: [
+      { texto: 'Probar como invitado', url: 'https://visagstock.onrender.com', nota: 'Botón "Entrar como invitado"; puede tardar un minuto en despertar' },
+      { texto: 'Ver el código en GitHub', url: 'https://github.com/stiven-triana-dev/VisagStock' },
     ],
   },
   {
@@ -171,10 +195,11 @@ export const trayectoria = [
 ]
 
 export const habilidades = [
-  { grupo: 'Lenguajes', items: ['Java', 'JavaScript', 'SQL', 'HTML', 'CSS', 'Python (básico)'] },
+  { grupo: 'Lenguajes', items: ['Java', 'JavaScript', 'TypeScript', 'SQL', 'Python (básico)'] },
   { grupo: 'Backend', items: ['Spring Boot', 'Spring Security', 'Spring Data JPA', 'Node.js', 'Express', 'FastAPI', 'API REST'] },
+  { grupo: 'Frontend', items: ['React', 'React Router', 'Vite', 'HTML', 'CSS', 'Diseño responsive'] },
   { grupo: 'Datos', items: ['PostgreSQL', 'Modelado relacional', 'Flyway', 'dbt', 'DuckDB', 'Power BI (DAX)', 'Modelo estrella'] },
-  { grupo: 'Calidad', items: ['JUnit', 'pytest', 'Pruebas automatizadas', 'GitHub Actions'] },
+  { grupo: 'Calidad', items: ['JUnit', 'pytest', 'Vitest', 'Testing Library', 'Pruebas automatizadas', 'GitHub Actions'] },
   { grupo: 'IA', items: ['API de Claude y Gemini', 'Agentes con herramientas', 'Evaluaciones de agentes'] },
   { grupo: 'Herramientas', items: ['Git', 'GitHub', 'Maven', 'VS Code', 'Render', 'Unity'] },
 ]
